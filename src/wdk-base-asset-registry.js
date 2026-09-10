@@ -60,6 +60,13 @@ import { BaseAssetSchema } from './schemas/index.js'
  */
 export default class WdkBaseAssetRegistry {
   /**
+   * Loose counterpart of `BaseAssetSchema`, which strips unknown keys.
+   *
+   * @protected
+   */
+  static LooseBaseAssetSchema = z.compile(z.looseObject(BaseAssetSchema.shape))
+
+  /**
    * Creates a new asset registry.
    *
    * @param {T[][]} preload - One or more asset lists to preload into the registry.
@@ -87,7 +94,7 @@ export default class WdkBaseAssetRegistry {
    * @throws {z.ZodError} Throws if the asset does not conform to the `BaseAssetSchema` shape.
    */
   _assertAsset (asset) {
-    return z.looseObject(BaseAssetSchema.shape).parse(asset)
+    return WdkBaseAssetRegistry.LooseBaseAssetSchema.parse(asset)
   }
 
   /**

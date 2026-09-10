@@ -18,9 +18,9 @@ import { z } from 'zod'
 
 /** @typedef {z.infer<typeof BaseAssetSchema>} BaseAsset */
 
-export const BaseAssetSchema = z.object({
+export const BaseAssetSchema = z.compile(z.object({
   id: z.string(),
   chainId: z.union([z.int(), z.string()])
-})
+}))
 
 export const BaseAssetJsonSchema = BaseAssetSchema.toJSONSchema()

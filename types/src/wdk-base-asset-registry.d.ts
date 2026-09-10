@@ -25,6 +25,15 @@
  */
 export default class WdkBaseAssetRegistry<T extends BaseAsset> {
     /**
+     * Loose counterpart of `BaseAssetSchema`, which strips unknown keys.
+     *
+     * @protected
+     */
+    protected static LooseBaseAssetSchema: z.ZodObject<{
+        id: z.ZodString;
+        chainId: z.ZodUnion<readonly [z.ZodInt, z.ZodString]>;
+    }, z.core.$loose>;
+    /**
      * Creates a new asset registry.
      *
      * @param {T[][]} preload - One or more asset lists to preload into the registry.
@@ -94,3 +103,4 @@ export type BaseAssetOptions = {
      */
     caseSensitive?: boolean | undefined;
 };
+import { z } from 'zod';
