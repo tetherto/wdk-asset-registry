@@ -1,6 +1,6 @@
 {
   "name": "@tetherto/wdk-asset-registry",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "The type system and interfaces for standardized asset identification across all WDK modules.",
   "keywords": [
     "wdk",
