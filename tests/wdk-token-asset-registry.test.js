@@ -52,6 +52,18 @@ describe('wallet-token-asset-registry', () => {
     expect(assets.length).toBeGreaterThan(0)
   })
 
+  test('should load Berachain USDT0 at its deployed address', () => {
+    const asset = wdkAssetRegistry.getTokenById(
+      'eip155:80094/0x779Ded0c9e1022225f8E0630b35a9b54bE713736'
+    )
+
+    expect(asset).toEqual(expect.objectContaining({
+      symbol: 'USDT0',
+      chainId: 'eip155:80094',
+      address: '0x779Ded0c9e1022225f8E0630b35a9b54bE713736'
+    }))
+  })
+
   test('should allow multiple asset sets in the constructor', () => {
     const registry = new WdkTokenAssetRegistry(
       structuredClone(commonTokens),
