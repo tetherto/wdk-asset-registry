@@ -6,9 +6,9 @@ A lightweight registry for accessing predefined blockchain assets across multipl
 
 ## 🔍 About WDK
 
-This module is part of the [**WDK (Wallet Development Kit)**](https://wallet.tether.io/) project, which empowers developers to build secure, non-custodial wallets with unified blockchain access, stateless architecture, and complete user control.
+This module is part of [**WDK (Wallet Development Kit) by Tether**](https://wdk.tether.io/), which empowers developers to build secure, non-custodial wallets with unified blockchain access, stateless architecture, and complete user control.
 
-For detailed documentation about the complete WDK ecosystem, visit [docs.wallet.tether.io](https://docs.wallet.tether.io).
+See the [Asset Registry documentation](https://docs.wdk.tether.io/tools/asset-registry/). For the complete ecosystem, see the [general WDK documentation](https://docs.wdk.tether.io/).
 
 ## 🌟 Features
 

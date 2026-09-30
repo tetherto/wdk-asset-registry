@@ -1,7 +1,8 @@
 {
   "name": "@tetherto/wdk-asset-registry",
   "version": "1.0.0-beta.4",
-  "description": "The type system and interfaces for standardized asset identification across all WDK modules.",
+  "description": "Asset registry and standardized asset identification for WDK (Wallet Development Kit) by Tether.",
+  "homepage": "https://docs.wdk.tether.io/tools/asset-registry/",
   "keywords": [
     "wdk",
     "asset",
